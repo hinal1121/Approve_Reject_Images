@@ -1,0 +1,7 @@
+{
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/src/tests/jest-init.js"],
+  "moduleNameMapper": {
+    "@mui/styled-engine": "@mui/styled-engine-sc"
+  }
+}
