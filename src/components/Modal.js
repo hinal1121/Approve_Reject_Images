@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { uiActions } from '../redux/reducers/ui'
 
 const Modal = ({ isOpen, title, children, ...rest }) => {
+  
   const dispatch = useDispatch()
 
   const handleClose = () => {
