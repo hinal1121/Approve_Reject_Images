@@ -9,7 +9,7 @@ import usePhotos from '../hooks/usePhotos'
 import { uiActions } from '../redux/reducers/ui'
 
 const Header = () => {
-  
+
   const dispatch = useDispatch()
 
   const photos = usePhotos()

@@ -10,11 +10,13 @@ import { selectPhotoViewing_id, uiActions } from '../redux/reducers/ui'
 
 // when you click photo in home page, you can see photo you clicked in fullscreen panel
 const ViewPhoto = () => {
+
   const [transform, setTransform] = useState({
     scale: 1,
   })
 
   const photoViewing_id = useSelector((state) => selectPhotoViewing_id(state))
+
   const selectedPhoto = useSelector((state) =>
     selectPhotoById(state, photoViewing_id)
   )
@@ -39,20 +41,26 @@ const ViewPhoto = () => {
 
   return (
     <StyledWrapper onClick={handleClickOutside}>
+
       <StyledPhoto
         component='img'
         src={selectedPhoto.url}
         onClick={(e) => e.stopPropagation()}
         transform={`translate(-50%, -50%) scale(${transform.scale})`}
       />
+
       <StyledButtonsWrapper onClick={(e) => e.stopPropagation()}>
+
         <IconButton sx={{ color: 'white' }} onClick={handleZoomInBtnClick}>
           <ZoomInOutlinedIcon />
         </IconButton>
+
         <IconButton sx={{ color: 'white' }} onClick={handleZoomOutBtnClick}>
           <ZoomOutOutlinedIcon />
         </IconButton>
+
       </StyledButtonsWrapper>
+      
     </StyledWrapper>
   )
 }
